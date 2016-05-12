@@ -1,5 +1,7 @@
 package com.demo.groceries;
 
+import java.math.BigDecimal;
+
 
 /**
  * A product containing the item's name and the price in pennies.
@@ -33,7 +35,7 @@ public class Product {
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
-        result.append(this.name).append('[').append(this.price).append(']');
+        result.append(this.name).append('[').append(BigDecimal.valueOf(this.price, 2)).append(']');
 
         return result.toString();
     }
